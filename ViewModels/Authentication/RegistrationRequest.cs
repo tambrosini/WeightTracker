@@ -12,6 +12,8 @@ namespace WeightTracker.ViewModels.Authentication
         [Required(ErrorMessage = "Last name is required")]
         public string LastName { get; set; }
 
+        //Email is going to be used as the username to require
+        //a unique email for each user
         [Required(ErrorMessage = "Email is required")]
         public string Email { get; set; }
 
