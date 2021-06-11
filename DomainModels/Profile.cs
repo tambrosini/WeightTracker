@@ -4,17 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 using WeightTracker.Data;
+using WeightTracker.DomainModels.Framework;
 
 namespace WeightTracker.DomainModels
 {
     [DataContract]
-    public class Profile
+    public class Profile : BaseEntity
     {
-        [DataMember]
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid Id { get; set; }
-
         [DataMember]
         [Column(TypeName = "decimal(18,4)")]
         public decimal Height { get; set; }
